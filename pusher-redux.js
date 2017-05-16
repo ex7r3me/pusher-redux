@@ -23,12 +23,21 @@ var pusherAction = function pusherAction(_ref) {
   var eventName = _ref.eventName;
   var data = _ref.data;
 
-  return {
-    type: actionType,
-    channel: channelName,
-    event: eventName,
-    data: data
-  };
+  if (actionType !== null && typeof actionType === 'object') {
+    return _extends({
+      channel: channelName,
+      event: eventName,
+      data: data
+    }, actionType)
+  }
+  else {
+    return {
+      type: actionType,
+      channel: channelName,
+      event: eventName,
+      data: data
+    }
+  }
 };
 
 // we need to wait before pusher connects until we can subscribe
@@ -118,3 +127,4 @@ module.exports.unsubscribe = function (channelName, eventName, actionType) {
     delete eventSubs[actionType];
   });
 };
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
