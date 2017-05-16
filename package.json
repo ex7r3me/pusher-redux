@@ -1,7 +1,7 @@
 {
-  "name": "pusher-redux",
-  "version": "0.1.1",
-  "description": "Integration of Pusher into Redux",
+  "name": "pusher-redux-plus",
+  "version": "0.2.0",
+  "description": "Clone of TheRusskiy integration of Pusher into Redux with payload support",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,8 +18,8 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/TheRusskiy/pusher-redux.git"
+    "url": "git://github.com/ex7r3me/pusher-redux.git"
   },
-  "author": "dimanrussian@gmail.com",
+  "author": "siavash.ahmadpour@gmail.com",
   "license": "MIT"
 }
